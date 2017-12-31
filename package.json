@@ -1,0 +1,23 @@
+{
+  "name": "frontend-basic-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x3388638/Frontend-basic-examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/x3388638/Frontend-basic-examples/issues"
+  },
+  "homepage": "https://github.com/x3388638/Frontend-basic-examples#readme",
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
+  }
+}
