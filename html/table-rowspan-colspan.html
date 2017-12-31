@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>Table rowspan / colspan</title>
+</head>
+<body>
+    <style>
+        table, th, td {
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+
+        tbody {
+            background: #eaeaea
+        }
+    </style>
+
+	<table>
+		<thead>
+			<tr>
+				<th>col1</th>
+				<th>col2</th>
+				<th>col3</th>
+				<th>col4</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>val 1</td>
+				<td rowspan="2">val 2</td>
+				<td>val 3</td>
+				<td>val 4</td>
+			</tr>
+			<tr>
+				<td>val 1</td>
+				<td colspan="2">val 3</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>foot col 1</td>
+				<td>foot col 2</td>
+				<td>foot col 3</td>
+				<td>foot col 4</td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>
