@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>Table</title>
+</head>
+<body>
+    <style>
+        table, td, th {
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            padding: 5px;
+        }
+
+        thead {
+            background: red;
+        }
+
+        tbody {
+            background: green;
+        }
+
+        tfoot {
+            background: blue;
+        }
+    </style>
+    
+	<table>
+		<thead>
+			<tr>
+				<th>col1</th>
+				<th>col2</th>
+				<th>col3</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>val 1</td>
+				<td>val 2</td>
+				<td>val 3</td>
+			</tr>
+			<tr>
+				<td>val 1</td>
+				<td>val 2</td>
+				<td>val 3</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>foot col 1</td>
+				<td>foot col 2</td>
+				<td>foot col 3</td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>
