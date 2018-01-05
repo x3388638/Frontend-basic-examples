@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>POST a from</title>
+</head>
+<body>
+	<form action="http://ycchen.im.ncnu.edu.tw/join.php" method="POST">
+		姓名: <input type="text" name="name" /><br />
+		帳號: <input type="text" name="account" /><br />
+		密碼: <input type="password" name="pwd" /><br />
+		性別: 男<input type="radio" name="gender" value="m" checked /> 女<input type="radio" name="gender" value="f" /><br />
+		年次:
+		<select name="year">
+			<option value="1990">1990</option>
+			<option value="1991">1991</option>
+			<option value="1992" selected>1992</option>
+		</select><br />
+		自我介紹: <textarea name="desc"></textarea><br />
+		大頭貼: <input type="file" name="file" /><br />
+		技術: 
+		<input type="checkbox" name="skills[]" value="java" /> java 
+		<input type="checkbox" name="skills[]" value="js" /> javascript<br />
+		<input type="submit" />
+	</form>
+</body>
+</html>
