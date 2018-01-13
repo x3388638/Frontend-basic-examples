@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Why jQuery</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<style>
+		div {
+			border: 1px solid #000;
+			padding: 10px;
+			margin-bottom: 5px;
+		}
+
+		pre {
+			background: yellow;
+			padding: 5px;
+		}
+	</style>
+	<div>
+		<p>Use jQuery to show hidden block after the button.</p>
+		<button id="btn1">Button 1</button><br />
+		<strong>Hidden block: </strong>
+		<pre style="display: none">
+$('#btn1').on('click', function () { 
+	$(this).siblings('pre').show(); 
+});
+		</pre>
+	</div>
+	<div>
+		<p>Use pure JavaScript to show hidden block after the button.</p>
+		<button id="btn2">Button 2</button><br />
+		<strong>Hidden block: </strong>
+		<pre style="display: none">
+document.getElementById('btn2').addEventListener('click', function (e) {
+	var targetElement = Array.prototype.filter.call(e.target.parentNode.children, function (child) {
+		return child !== e.target;
+	}).filter(function (el, i) {
+		if (el.tagName.toLowerCase() === 'pre') {
+			return true;
+		}
+
+		return false;
+	})[0];
+
+	targetElement.style.display = '';
+});
+		</pre>
+	</div>
+	<script>
+		// jQuery
+		$('#btn1').on('click', function () {
+			$(this).siblings('pre').show();
+		});
+
+		// pure javascript
+		document.getElementById('btn2').addEventListener('click', function (e) {
+			var targetElement = Array.prototype.filter.call(e.target.parentNode.children, function (child) {
+				return child !== e.target;
+			}).filter(function (el, i) {
+				if (el.tagName.toLowerCase() === 'pre') {
+					return true;
+				}
+
+				return false;
+			})[0];
+
+			targetElement.style.display = '';
+		});
+	</script>
+</body>
+</html>
