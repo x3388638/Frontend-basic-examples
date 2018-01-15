@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DOM</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+	<style>
+		div.block {
+			border: 1px solid #000;
+			padding: 10px;
+			background: #fff;
+		}
+
+		div.main {
+			background: gold ;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row mt-5">
+			<div class="col-12">
+				<div class="main block">
+					main block
+					<div class="block">
+						a div
+						<div class="block">
+							another div
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mt-2">
+			<div class="col-12">
+				<button class="btn btn-primary empty">empty</button>
+				<button class="btn btn-primary remove">remove</button>
+			</div>
+		</div>
+	</div>
+	<script>
+		$('button.empty').on('click', function () {
+			$('.main').empty();
+		});
+
+		$('button.remove').on('click', function () {
+			$('.main').remove();
+		});
+	</script>
+</body>
+
+</html>

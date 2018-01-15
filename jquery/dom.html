@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DOM</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+	<style>
+		.main {
+			border: 1px solid #000;
+			padding: 10px
+		}
+
+		.something {
+			border: 1px solid #000;
+			border-radius: 10px;
+			background: gold;
+			padding: 5px;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row mt-5">
+			<div class="col-12">
+				<div class="main mt-5 mb-5">
+					main block
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div class="row mt-2">
+			<div class="col-12">
+				<button class="btn btn-primary append">append</button>
+				<button class="btn btn-primary prepend">prepend</button>
+				<button class="btn btn-primary before">before</button>
+				<button class="btn btn-primary after">after</button>
+			</div>
+		</div>
+	</div>
+	<script>
+		let count = 0;
+		$('button.append').on('click', function () {
+			$('.main').append('<span class="something">' + ++count + '</span>');
+		});
+
+		$('button.prepend').on('click', function () {
+			$('.main').prepend('<span class="something">' + ++count + '</span>');
+		});
+
+		$('button.before').on('click', function () {
+			$('.main').before('<span class="something">' + ++count + '</span>');
+		});
+
+		$('button.after').on('click', function () {
+			$('.main').after('<span class="something">' + ++count + '</span>');
+		});
+	</script>
+</body>
+
+</html>
