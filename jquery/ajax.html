@@ -42,10 +42,14 @@
 		}, 100);
 
 		$('button.ajax').on('click', function () {
+			$('button.ajax').attr('disabled', true);
 			$.ajax({
 				url: 'https://api.github.com/users/x3388638',
 				type: 'get',
 				dataType: 'json',
+				complete: function () {
+					$('button.ajax').attr('disabled', false);
+				},
 				success: function (data) {
 					console.log(data);
 					$('.result').text(JSON.stringify(data));
