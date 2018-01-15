@@ -36,6 +36,12 @@
 				<pre id="result"></pre>
 			</div>
 		</div>
+		<div class="row mt-5">
+			<div class="col-12">
+				<button class="btn btn-primary setText">$('p').text('&lt;h1&gt;a h1 element&lt;/h1&gt;')</button>
+				<button class="btn btn-primary setHtml">$('p').html('&lt;h1&gt;a h1 element&lt;/h1&gt;')</button>
+			</div>
+		</div>
 	</div>
 	<script>
 		$('button.text').on('click', function () {
@@ -44,6 +50,14 @@
 
 		$('button.html').on('click', function () {
 			$('#result').text($('p').html());
+		});
+
+		$('button.setText').on('click', function () {
+			$('p').text('<h1>a h1 element</h1>');
+		});
+
+		$('button.setHtml').on('click', function () {
+			$('p').html('<h1>a h1 element</h1>');
 		});
 	</script>
 </body>
