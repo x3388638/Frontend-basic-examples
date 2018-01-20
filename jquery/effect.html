@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Effect</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+</head>
+<body>
+	<style>
+		.target {
+			display: inline-block;
+			width: 200px;
+			height: 200px;
+			background: gold;
+			line-height: 200px;
+			text-align: center;
+		}
+	</style>
+	<div class="container">
+		<div class="row mt-5">
+			<div class="col-12">
+				<span class="target">Target</span>
+			</div>
+		</div>
+		<hr />
+		<div class="row">
+			<div class="col-12">
+				<div class="mb-2">
+					<button class="btn btn-primary hide">.hide()</button>
+					<button class="btn btn-primary show">.show(2000)</button>
+					<button class="btn btn-primary toggle">.toggle()</button>
+				</div>
+				<div class="mb-2">
+					<button class="btn btn-primary fadeIn">.fadeIn(3000)</button>
+					<button class="btn btn-primary fadeOut">.fadeOut()</button>
+				</div>
+				<div class="mb-2">
+					<button class="btn btn-primary slideUp">.slideUp()</button>
+					<button class="btn btn-primary slideDown">.slideDown(100)</button>
+					<button class="btn btn-primary slideToggle">.slideToggle()</button>
+				</div>
+				<div class="mb-2">
+					<button class="btn btn-danger stop">.stop()</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$('.hide').on('click', function () {
+			$('.target').hide();
+		});
+
+		$('.show').on('click', function () {
+			$('.target').show(2000);
+		});
+
+		$('.toggle').on('click', function () {
+			$('.target').toggle(2000);
+		});
+
+		$('.fadeIn').on('click', function () {
+			$('.target').fadeIn(3000);
+		});
+
+		$('.fadeOut').on('click', function () {
+			$('.target').fadeOut();
+		});
+
+		$('.slideUp').on('click', function () {
+			$('.target').slideUp();
+		});
+
+		$('.slideDown').on('click', function () {
+			$('.target').slideDown(100);
+		});
+
+		$('.slideToggle').on('click', function () {
+			$('.target').slideToggle();
+		});
+
+		$('.stop').on('click', function () {
+			$('.target').stop();
+		});
+	</script>
+</body>
+</html>
